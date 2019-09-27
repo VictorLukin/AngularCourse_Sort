@@ -1,0 +1,8 @@
+<div class="center">
+  <app-sort-input (ready)="updateInput($event)"></app-sort-input>
+  <br/>
+  <button (click)="onClickExecuteSort()">Execute sort</button>
+  <hr/>
+  <app-sort-output [values]="values"></app-sort-output>
+  <hr/>
+</div>

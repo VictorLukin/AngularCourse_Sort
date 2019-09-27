@@ -1,0 +1,13 @@
+<div>
+  <label for="input-values">
+    Input some numbers using ";" or " " or new line as separator:
+  </label>
+  <br/>
+  <textarea
+      #textArea
+      id="input-values"
+      name="values"
+      rows="3"
+      (blur)="onBlur(textArea.value)"
+  ></textarea>
+</div>
