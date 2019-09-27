@@ -1,0 +1,7 @@
+<application>
+  <component name="GithubAccounts">
+    <account id="b1786e62-3665-4fb8-b5b7-b2b78b9ff78b" name="lukin@fastmail.com">
+      <server host="github.com" />
+    </account>
+  </component>
+</application>
