@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 import {Sort} from '../../classes/sort';
 
 @Component({
@@ -6,26 +6,24 @@ import {Sort} from '../../classes/sort';
   templateUrl: './sort.component.html',
   styleUrls: ['./sort.component.css']
 })
-export class SortComponent implements OnInit {
+export class SortComponent {
 
   public text = '';
   public values: number[];
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor() {
   }
 
-  updateInput(text: string) {
+  updateInput(text: string): void {
     this.text = text;
   }
 
-  onClickExecuteSort() {
+  onClickExecuteSort(): void {
     const sort: Sort = new Sort();
     this.values = sort.parse(this.text);
     const error = sort.validate(this.values);
     if (error.length > 0) {
-        alert(error);
+      alert(error);
     }
     this.values = sort.sort(this.values);
   }
